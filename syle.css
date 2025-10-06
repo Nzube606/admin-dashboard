@@ -1,3 +1,56 @@
 body {
-    color: red;
+    margin: 0;
+    height: 100%;
+    /* width: 1500px; */
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    border: 1px solid green;
+}
+
+.container div {
+    /* border: 1px solid rgb(233, 131, 15); */
+}
+.sidebar {
+    background-color: rgb(57, 155, 219);
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    color: white;
+
+    display: grid;
+    justify-items: start;
+}
+
+.dashboard {
+    font-size: 1.5rem;
+    padding:0px 15px;
+}
+
+.menu ul {
+    list-style: none;
+    margin-bottom: 45px;
+}
+.menu ul li {
+    margin-bottom: 15px;
+}
+.main-content {
+    grid-area: 2 / 2 / -1 / -1;
+}
+.dashboard,
+.home,
+.profile, 
+.messages,
+.history,
+.tasks,
+.communities,
+.settings,
+.support,
+.privacy {
+    display: flex;
+    align-items: center;
+    fill: currentColor;
+    gap: 8px;
 }
