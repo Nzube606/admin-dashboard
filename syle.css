@@ -1,25 +1,39 @@
+@font-face {
+    font-family: 'Creato Display';
+    src: url('fonts/CreatoDisplay-Black.woff2') format('woff2'),
+        url('fonts/CreatoDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tokyo';
+    src: url('fonts/TokyoRegular.woff2') format('woff2'),
+        url('fonts/TokyoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 html {
     height: 650px;
+    font-family: 'Creato Display';
 }
 body {
     margin: 0;
     height: 100%;
      --ash-background: rgb(231, 228, 228);
-     --sidebar-color: rgb(57, 155, 219);
+     --sidebar-color: purple;
 }
 .container {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
-    border: 1px solid green;
 }
 
-.main-content, 
-.main-content div,
-.container div {
-    border: 1px solid rgb(233, 131, 15);
-}
 .sidebar {
     background-color: var(--sidebar-color);
     grid-column: 1 / 2;
@@ -80,7 +94,6 @@ input[type="search"] {
     border-radius: 15px;
     margin-left: 10px;
     padding: 4px 10px;
-    font-size: 0.9em;
 }
 input[type="search"]:focus {
     border: none;
@@ -116,10 +129,6 @@ input[type="search"]:focus {
     margin-left : 8px;
     align-self: center;
 }
-.user-name {
-    font-weight: bold;
-    
-}
 
 .greetings span {
     font-size: 0.7em;
@@ -138,10 +147,115 @@ input[type="search"]:focus {
     background-color: var(--sidebar-color);
     color: white;
 }
+.right-items button:hover {
+    background-color: rgb(135, 52, 156);
+}
 .main-content {
     grid-area: 2 / 2 / -1 / -1;
     background-color: var(--ash-background);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    margin: 15px;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px;
+    box-shadow: inset 0px 5px 3px -2px #A2ABB5;
+    gap: 20px 15px;
+}
+.projects {
+    grid-area: 1 / 1 / -1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px repeat(3, 1fr);
+    gap: 12px; 
+}
+.project-heading {
+    grid-column: 1 / -1;
+    align-self: end;
+    font-size: 1.1em;
+}
+.article {
+    box-shadow: inset 7px 0px 0px -2px gold, 0px 5px 9px -3px #A6ACB2;
+}
+.article,
+.news,
+.trends {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+.announcements,
+.trending {
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    gap: 12px;
+}
+
+.announcements > span, 
+.trending > span {
+    font-size: 1em;
+    align-self: end;
+}
+.article-content {
+    margin-bottom: 20px;
+}
+.article:hover {
+    background-color: rgb(241, 237, 237);
+}
+.article-options {
+    display: flex;
+    justify-content: flex-end;
+}
+.article-options svg {
+    margin-left: 15px;
+}
+.news-content,
+.article-content {
+    font-size: 0.8em;
+    color: #3b3b3b;
+}
+.news-heading {
+    font-size: 0.9em;
+}
+.trends {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.image-container-4, 
+.image-container-1,
+.image-container-2,
+.image-container-3 {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.image-container-4 {
+    background-color: yellow;
+}
+.image-container-2 {
+    background-color: grey;
+}
+.image-container-3 {
+    background-color: pink;
+}
+.image-container-1 {
+    background-color: yellow;
+}
+.user-name-1,
+.user-name-2,
+.user-name-3,
+.user-name-4 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    font-size: 0.9em;
+    column-gap: 10px;
+}
+.handle {
+    font-size: 0.85em;
+}
+.project-name {
+    color: #3b3b3b;
+    font-size: 0.9em;
 }

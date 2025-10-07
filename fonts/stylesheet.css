@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Creato Display';
+    src: url('CreatoDisplay-Black.woff2') format('woff2'),
+        url('CreatoDisplay-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tokyo';
+    src: url('TokyoRegular.woff2') format('woff2'),
+        url('TokyoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
